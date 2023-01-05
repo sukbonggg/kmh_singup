@@ -19,8 +19,8 @@ repositories {
 	mavenCentral()
 }
 
-dependencies {
-	// taglibs
+dependencies {	
+	implementation group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
 	implementation group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.5'
 	implementation 'javax.servlet:jstl'
     implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
@@ -31,7 +31,9 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'	
+	
+	
 }
 
 tasks.named('test') {
