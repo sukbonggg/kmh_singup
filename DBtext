@@ -1,0 +1,20 @@
+# member 테이블 생성
+CREATE TABLE `member`(
+	SET loginId VARCHAR(20) NOT NULL UNIQUE,
+	loginPw VARCHAR(100) NOT NULL,
+	`name` VARCHAR(20) NOT NULL,
+	nickname VARCHAR(20) NOT NULL,
+	cellphoneNum VARCHAR(20) NOT NULL,
+	email VARCHAR(50) NOT NULL
+	
+#멤버 테이블 테스트용 데이터
+INSERT INTO `member`
+SET loginId = 'test1',
+loginPw = 'test1',
+`name` = '유저1',
+nickname = '유저1',
+cellphoneNum = '01022223333',
+email = 'http-@naver.com';
+
+SELECT * FROM `member`;
+);

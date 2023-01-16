@@ -59,7 +59,7 @@
 						<div><input type="password" name="loginPw" class="loginPw panel panel-headline" maxlength="20" style="width: 800px;" placeholder="loginPw" ></div>
 						<div><input type="tel" name="cepllphoneNum" class="cepllphoneNum panel panel-headline" style="width: 800px;" maxlength="20"  placeholder="cepllphoneNum" ></div>
 						<div><input type="email" name="email" class="email panel panel-headline" maxlength="20" style="width: 800px;"  placeholder="email" ></div>
-						<div><button style="width: 800px; background-color: #B0E0E6;  color:white "  >Join</button></div>
+						<div><input type="submit" style="width: 800px; background-color: #B0E0E6;  color:white "value="Join" ></div>
 						
 				</div>
 			</div>

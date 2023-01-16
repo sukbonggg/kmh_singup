@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+
 @SpringBootApplication
 public class KmhTestss1Application extends SpringBootServletInitializer {
 
@@ -17,3 +18,5 @@ public class KmhTestss1Application extends SpringBootServletInitializer {
 	  }
 
 }
+
+
