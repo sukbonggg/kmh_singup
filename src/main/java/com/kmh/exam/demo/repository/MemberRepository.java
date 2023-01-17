@@ -42,11 +42,11 @@ public interface MemberRepository {
 	@Select("""
 			SELECT *
 			FROM `member`
-			WHERE name = #{name}
+			WHERE `name` = #{name}
 			AND email = #{email}
 			""")
 	
-	public Member getMemberByNameAndEmail(String name, String email);
+	public Member getMemberByNameAndEmail( @Param("name")String name, @Param("email") String email);
 
 	
 }

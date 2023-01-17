@@ -36,7 +36,7 @@
 								<div class="logo text-center"><img src="/img/logo-dark.png" alt="Klorofil Logo"></div>
 								<p class="lead">Login to your account</p>
 							</div>
-							<form class="form-auth-small" action="doloign" method="POST">
+							<form class="form-auth-small" action="doLoign" method="POST">
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">로그인 아이디</label>
 									<input type="text" name="loginId" class="form-control" id="signin-email"  placeholder="loginId">
@@ -51,7 +51,7 @@
 										<span>Remember me</span>
 									</label>
 								</div>
-								<input type="submit" class="btn btn-primary btn-lg btn-block" value="로그인"/>
+								<button class="btn btn-primary btn-lg btn-block" >로그인</button>
 								<div class="bottom">
 									<span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
 								</div>

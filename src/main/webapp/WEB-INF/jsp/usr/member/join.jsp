@@ -47,26 +47,31 @@
 <!-- MAIN -->
 <div class="main">
 	<!-- MAIN CONTENT -->
+	
 	<div class="main-content">
 		<div class="container-fluid">
 			<!-- OVERVIEW -->
+			<form action="doJoin" method="post">
 			<div class="panel panel-headline">
 				<div class="panel-heading">
 				
 					<h3 class="panel-title">Sing Up</h3>
-						<div><input type="text" name="name" class="name panel panel-headline" style="width: 800px;"  maxlength="20"  placeholder="Id" ></div>
+						<div><input type="text" name="nickname" class="name panel panel-headline" style="width: 800px;"  maxlength="20"  placeholder="nickname" ></div>
+						<div><input type="text" name="name" class="name panel panel-headline" style="width: 800px;"  maxlength="20"  placeholder="name" ></div>
 						<div><input type="text" name="loginId" class="loginId panel panel-headline" style="width: 800px;" maxlength=20  placeholder="loginId" ></div>
 						<div><input type="password" name="loginPw" class="loginPw panel panel-headline" maxlength="20" style="width: 800px;" placeholder="loginPw" ></div>
-						<div><input type="tel" name="cepllphoneNum" class="cepllphoneNum panel panel-headline" style="width: 800px;" maxlength="20"  placeholder="cepllphoneNum" ></div>
+						<div><input type="tel" name="cellphoneNum" class="cepllphoneNum panel panel-headline" style="width: 800px;" maxlength="20"  placeholder="cellphoneNum" ></div>
 						<div><input type="email" name="email" class="email panel panel-headline" maxlength="20" style="width: 800px;"  placeholder="email" ></div>
 						<div><input type="submit" style="width: 800px; background-color: #B0E0E6;  color:white "value="Join" ></div>
 						
 				</div>
 			</div>
+			</form>
 		</div>
 
 
 	</div>
+	
 	<!-- END MAIN -->
 	<div class="clearfix"></div>
 	<footer>

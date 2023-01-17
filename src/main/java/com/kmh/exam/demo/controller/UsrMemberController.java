@@ -71,7 +71,7 @@ public class UsrMemberController {
 	@ResponseBody
 	public String doLogin(HttpSession httpSession, String loginId, String loginPw) {
 
-		if (httpSession.getAttribute("loginedMemberId") != null) {
+		if (httpSession.getAttribute("loginId") != null) {
 			return Utility.jsHistoryBack("이미로그인 되어있습니다");
 		}
 
@@ -101,7 +101,7 @@ public class UsrMemberController {
 	@ResponseBody
 	public String doLogOut(HttpSession httpSession) {
 
-		if (httpSession.getAttribute("loginedMemberId") != null) {
+		if (httpSession.getAttribute("loginId") != null) {
 			return Utility.jsHistoryBack("이미로그아웃 상태입니다");
 		}
 		httpSession.removeAttribute("loginedMemberId");
