@@ -36,14 +36,16 @@
 								<div class="logo text-center"><img src="/img/logo-dark.png" alt="Klorofil Logo"></div>
 								<p class="lead">Login to your account</p>
 							</div>
+							
 							<form class="form-auth-small" action="doLoign" method="POST">
 								<div class="form-group">
+								
 									<label for="signin-email" class="control-label sr-only">로그인 아이디</label>
-									<input type="text" name="loginId" class="form-control" id="signin-email"  placeholder="loginId">
+									<input type="text" id="loginId" name="loginId" class="form-control" id="signin-email"  placeholder="loginId">
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">로그인 비밀번호</label>
-									<input type="password"  name="loginPw" class="form-control" id="signin-password"  placeholder="Password">
+									<input type="password"id="loginPw"  name="loginPw" class="form-control" id="signin-password"  placeholder="Password">
 								</div>
 								<div class="form-group clearfix">
 									<label class="fancy-checkbox element-left">
@@ -56,6 +58,10 @@
 									<span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
 								</div>
 							</form>
+							
+							
+						
+							
 						</div>
 					</div>
 					<div class="right">
