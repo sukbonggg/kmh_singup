@@ -3,23 +3,49 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../home/header.jsp"%>
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 
 
-
+<head>
 <!-- jqGrid 라이브러리 추가  -->
 
+
+
+<link rel="stylesheet" href="/css/jquery-ui.structure.css">
+<link rel="stylesheet" href="/css/jquery-ui.theme.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="/css/ui.jqgrid.css" />
 
-<link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.structure.css">
-<link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.theme.css">
-<link rel="stylesheet" type="text/css" href="/css/jquery-ui.css">
+<script  src="/js/jquery-1.7.2.min.js"    type="text/javascript" ></script>
+<script  src="/js/i18n/grid.locale-kr.js" type="text/javascript" ></script>
+<script  src="/js/jquery.jqGrid.min.js"   type="text/javascript" ></script>
 
 
-<script src="/js/jquery-1.7.2.min.js" type="text/javascript"></script>
-<script src="/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
-<script src="/js/jquery.jqGrid.min.js" type="text/javascript"></script>
 
+
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon.png">
+
+
+ <style>
+        #area {
+            width: 1280px;
+            height: 800px;
+        }
+    </style>
+</head>
 
 
 <!-- <li>
@@ -63,76 +89,96 @@
 <!-- END WRAPPER -->
 <!-- Javascript -->
 <script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="/vendor/chartist/js/chartist.min.js"></script>
 <script src="/scripts/klorofil-common.js"></script>
 
+<style>
+        #area {
+            width: 1280px;
+            height: 800px;
+        }
+    </style>
+</head>
+
 <body>
- 
- <table id="jqGrid"></table>
-<div id="gridpager"></div>
-  
+
+<table id="jqGrid">
+
+</table>
+<div id="area">
+    <div id="jqpager"></div>
+
+</div>
+
 </body>
 <script>
-var dataArr = [ 
-    {ID:"1",javascript:"80",python:"60",jsp:"50"},
-    {ID:"2",javascript:"57",python:"80",jsp:"50"},
-    {ID:"3",javascript:"90",python:"40",jsp:"85"},
-    {ID:"4",javascript:"67",python:"84",jsp:"76"},
-    {ID:"5",javascript:"35",python:"83",jsp:"85"},
-    {ID:"6",javascript:"90",python:"67",jsp:"56"},
-    {ID:"7",javascript:"80",python:"60",jsp:"50"},
-    {ID:"8",javascript:"45",python:"67",jsp:"100"},
-    {ID:"9",javascript:"90",python:"40",jsp:"68"},
-    {ID:"10",javascript:"67",python:"57",jsp:"76"},
-    {ID:"11",javascript:"36",python:"83",jsp:"35"},
-    {ID:"12",javascript:"76",python:"35",jsp:"98"},
-    ]; 
-    
-$("#jqGrid").jqGrid({
-   datatype: "local",
-   data: dataArr,
-   height: 250, 
-   width: 500,
-   colNames : ['ID','자바스크립트','파이썬','JSP'], 
+    $("#jqGrid").jqGrid({
+        datatype: "local",
+        colNames:['seq','2번', '3번', '4번','5번','6번','7번','8번','9번',],
+        colModel:[
+            {name:'seq', align:'right'},
+            {name:'first', align:'right'},
+            {name:'second', align:'right'},
+            {name:'third', align:'right'},
+            {name:'fifth', align:'right'},
+            {name:'sixth', align:'right'},
+            {name:'seventh', align:'right'},
+            {name:'eighth', align:'right'},
+            {name:'ninth', align:'right'},
 
-   colModel:[
-       {name:"ID",
-       index:"ID",
-       width:15,
-       align:'center',
-       hidden:false
-       },
+        ],
+        caption: "Custom_edu_first_jqgrid",
+        pager : "#jqpager",
+        height: 'auto',
 
-       {name : 'javascript',
-       index : 'javascript',
-       width : 70, 
-       align : 'left',
-       hidden:false,
-       },
+    })
 
-       {name : 'python',
-       index : 'python',
-       width : 70, 
-       align : 'center',
-       hidden:false
-       },
+    const data1 =  {
+        'seq' : 1,
+        'first' : 20,
+        'second' : 30,
+        'third' : 30,
+        'fifth' : 40,
+        'sixth' : 80,
+        'seventh' : 90,
+        'eighth' : 70,
+        'ninth' : 10
+    }
 
-       {name : 'jsp',
-       index : 'jsp',
-       width : 70, 
-       resizable : true,
-       align : 'right',
-       hidden:false
-       }],
+    const data2 =  {
+        'seq' : 2,
+        'first' : 20,
+        'second' : 30,
+        'third' : 30,
+        'fifth' : 40,
+        'sixth' : 80,
+        'seventh' : 90,
+        'eighth' : 70,
+        'ninth' : 10
+    }
 
-   loadtext: "로딩중일때 표시되는 텍스트!",
-   caption: "jQuery Grid: jqGrid 샘플",
+    const data3 =  {
+        'seq' : 3,
+        'first' : 20,
+        'second' : 30,
+        'third' : 30,
+        'fifth' : 40,
+        'sixth' : 80,
+        'seventh' : 90,
+        'eighth' : 70,
+        'ninth' : 10
+    }
 
-   pager:"#gridpager",
-   rowNum:5,
+    const arr = [data1, data2, data3];
+
+    for(let i in arr){
+        $("#jqGrid").jqGrid('addRowData',i+1,arr[i]);
+    }
+
+
 </script>
 
 </html>
